@@ -2,33 +2,35 @@
 """
 a module that computes the area and param of a square
 """
+
+
 class square():
-   """the containing class"""
+    """the containing class"""
 
-   width = 0
-   height = 0
+    width = 0
+    height = 0
 
+    def __init__(self, *args, **kwargs):
+        """initialization"""
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
-   def __init__(self, *args, **kwargs):
-       """initialization"""
-       for key, value in kwargs.items():
-           setattr(self, key, value)
+    def area_of_my_square(self):
+        """ Area of the square """
+        return (self.width * self.width)
 
-   def area_of_my_square(self):
-       """ Area of the square """
-       return (self.width * self.width)
+    def PermiterOfMySquare(self):
+        """the param calculator"""
+        return (self.width * 4)
 
-   def PermiterOfMySquare(self):
-       """the param calculator"""
-       return (self.width * 4)
-   
-   def __str__(self):
-       """the output"""
-       return "{}/{}".format(self.width, self.height)
+    def __str__(self):
+        """the output"""
+        return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
-   s = square(width=12, height=9)
-   print(s)
-   print(s.area_of_my_square())
-   print(s.PermiterOfMySquare())
+    s = square(width=12, height=9)
+    print(s)
+    print(s.area_of_my_square())
+    print(s.PermiterOfMySquare())

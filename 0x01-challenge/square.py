@@ -4,7 +4,7 @@ a module that computes the area and param of a square
 """
 
 
-class square:
+class Square:
     """the containing class"""
 
     width = 0

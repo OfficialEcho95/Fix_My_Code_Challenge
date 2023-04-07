@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''
+"""
 a module that computes the area and param of a square
-'''
+"""
 class square():
    """the containing class"""
 
@@ -10,7 +10,7 @@ class square():
 
 
    def __init__(self, *args, **kwargs):
-       '''initialization'''
+       """initialization"""
        for key, value in kwargs.items():
            setattr(self, key, value)
 
@@ -19,11 +19,11 @@ class square():
        return self.width * self.width
 
    def PermiterOfMySquare(self):
-       '''the param calculator'''
+       """the param calculator"""
        return (self.width * 2) + (self.height * 2)
 
    def __str__(self):
-       '''the output'''
+       """the output"""
        return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":

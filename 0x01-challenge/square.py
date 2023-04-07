@@ -4,7 +4,7 @@ a module that computes the area and param of a square
 """
 
 
-class square():
+class square:
     """the containing class"""
 
     width = 0
@@ -21,7 +21,7 @@ class square():
 
     def PermiterOfMySquare(self):
         """the param calculator"""
-        return (self.width * 4)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """the output"""
